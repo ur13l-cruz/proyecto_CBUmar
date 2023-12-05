@@ -1,1 +1,1 @@
-# proyecto_CBUmar
+# Proyecto para el laboratorio de colecciones biologicas de la universidad del mar
