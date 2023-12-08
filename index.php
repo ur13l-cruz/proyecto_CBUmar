@@ -12,7 +12,10 @@
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: #eef4f8;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">imagen_coleccion</a>
+        <a class="navbar-brand" href="#">
+          <img src="img/icono_cb_prueba.png" alt="Logo" width="40" height="34" class="d-inline-block align-text-top">
+          Colección biológica UMAR
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,30 +33,31 @@
             style="--bs-scroll-height: 200px"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" onclick="cargarContenidoMenus('pages/inicio.php')">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Colección biológica</a>
+              <a class="nav-link" onclick="cargarContenidoMenus('pages/cb.php')">Colección biológica</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Acerca de</a>
+              <a class="nav-link" onclick="cargarContenidoMenus('pages/acercaDe.php')">Acerca de</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     
-    <div class="container" id="divContenido">
-
+    <div class="container mt-5" id="divContenido">
+      
     </div>
 
-    <div class="d-none" id="divContenidoInicio">
-      <h4>Laboratorio de colecciones biologicas</h4>
-    </div>
+    <footer class="footer mt-auto py-3 bg-light fixed-bottom">
+      <div class="container text-center">
+        <span class="text-muted">Derechos reservados UMAR</span>
+      </div>
+    </footer>
 
     <!-- Componentes las cuales se mostrarán deacuerdo a lo seleccionado en el nav-bar -->
-
-
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
