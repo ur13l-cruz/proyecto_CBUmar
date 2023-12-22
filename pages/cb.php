@@ -1,6 +1,6 @@
 <div>
   <div class="row d-flex justify-content-end">
-    <button type="button" class="btn btn-primary" style="width: 160px;" onclick="cargarContenidoMenus('pages/cb_dinamico.php')">Mostrar coleccion</button>
+    <button type="button" class="btn btn-primary" style="width: 160px;" onclick="cargarContenidoMenus('cb/ejemplares')">Mostrar coleccion</button>
   </div>
   <div class="row">
     <h1>Coleccion biologica</h1>

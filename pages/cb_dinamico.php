@@ -2,6 +2,10 @@
   <div class="row d-flex justify-content-start">
     <button type="button" class="btn btn-primary" style="width: 100px;" onclick="cargarContenidoMenus('pages/cb.php')">Regresar</button>
   </div>
+  <div class="row">
+    <input type="text" name="" id="">
+    
+  </div>
   <div class="row mt-3 table-responsive">
     <!-- tabla rellenada con la informacion de la base de datos, con js mostrar las filas. -->
     <table class="table text-center">

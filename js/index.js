@@ -1,9 +1,40 @@
+/*
 window.onload = function() {
-  cargarContenidoMenus('pages/inicio.php');
+  cargarContenidoMenus('/');
 };
+*/
+window.addEventListener('popstate', router);
+document.addEventListener('DOMContentLoaded', router);
+
+function router() {
+  var path = window.location.pathname;
+  switch (path) {
+    case '/':
+      fetchContent('pages/inicio');
+      break;
+    case '/cb':
+      fetchContent('pages/cb');
+      break;
+    case '/acercaDe':
+      fetchContent('pages/acercaDe');
+      break;
+    default:
+      document.getElementById('divContenido').innerHTML = '404';
+  }
+}
+
+function fetchContent(page) {
+  fetch(page + '.php')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('divContenido').innerHTML = data;
+    });
+}
 
 function cargarContenidoMenus(ruta) {
-  fetch(ruta)
+  window.history.pushState({}, ruta, window.location.origin + ruta);
+  router();
+  /*fetch(ruta)
     .then(response => response.text())
     .then(data => {
       document.getElementById("divContenido").innerHTML = "";
@@ -11,5 +42,5 @@ function cargarContenidoMenus(ruta) {
     })
     .catch(error => {
       console.error('Error:', error);
-    });
+    });*/
 }
